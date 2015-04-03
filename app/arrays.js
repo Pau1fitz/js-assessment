@@ -29,7 +29,12 @@ define(function() {
     },
 
     removeWithoutCopy : function(arr, item) {
-
+        for (var i = 0; i < arr.length; i++) {
+               if(arr[i] === item){
+                arr.splice(i, 2);
+            }
+        };
+        return arr;
     },
 
     append : function(arr, item) {
@@ -58,11 +63,18 @@ define(function() {
     },
 
     insert : function(arr, item, index) {
-
+        arr.splice(index, 0, item);
+        return arr;
     },
 
     count : function(arr, item) {
-
+        var counter = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === item) {
+                counter+=1;
+            }
+        }
+        return counter;
     },
 
     duplicates : function(arr) {
@@ -70,11 +82,22 @@ define(function() {
     },
 
     square : function(arr) {
-
+        var answer = [];
+        for (var i = 0; i < arr.length; i++) {
+            var number = arr[i] * arr[i];
+            answer.push(number);
+        };
+        return answer;
     },
 
     findAllOccurrences : function(arr, target) {
-
+        var answer = [];
+        for (var i = 0; i < arr.length; i++) {
+            if(arr[i] === target){
+                answer.push(i)
+            }
+        };
+        return answer;
     }
-  };
+}
 });
