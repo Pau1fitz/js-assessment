@@ -21,12 +21,10 @@ define(function() {
 
     remove : function(arr, item) {
         for (var i = 0; i < arr.length; i++) {
-            console.log(arr[i])
             if(arr[i] === item){
                 arr.splice(i, 1);
             }
         };
-        console.log(arr)
         return arr;
     },
 
@@ -35,11 +33,13 @@ define(function() {
     },
 
     append : function(arr, item) {
-
+        arr.push(item);
+        return arr;
     },
 
     truncate : function(arr) {
-
+        arr.pop();
+        return arr;
     },
 
     prepend : function(arr, item) {
