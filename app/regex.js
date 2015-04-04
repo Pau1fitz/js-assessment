@@ -9,7 +9,8 @@ define(function() {
     },
 
     containsRepeatingLetter : function(str) {
-
+        var hasDuplicates = (/([a-zA-Z]).*?\1/).test(str);
+        return hasDuplicates;
     },
 
     endsWithVowel : function(str) {
