@@ -12,7 +12,7 @@ define(function() {
         return "buzz"
       }else if (isNaN(num)){
         return false
-        }
+      }
       else{
         return num
       }
