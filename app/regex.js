@@ -22,8 +22,9 @@ define(function() {
     },
 
     matchesPattern : function(str) {
-
+        return /^\d\d\d-\d\d\d-\d\d\d\d$/.test(str)
     },
+
     isUSD : function(str) {
 
     }
