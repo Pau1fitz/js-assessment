@@ -19,18 +19,23 @@ define(function() {
       if (flag) {
         function getValue() { return 'a'; }
       } else {
-        function getValue() { return 'b'; }
+        function getValue() { return 'a'; }
       }
 
       return getValue();
     },
 
-    parseInt : function(num) {
-      return parseInt(num);
+    parseInt : function(num, radix) {
+      return parseInt(num, 10);
     },
 
     identity : function(val1, val2) {
-
+      if(val1 === val2){
+        return true;
+      }
+      else{
+        return false;
+      }
     }
   };
 });
