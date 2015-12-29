@@ -8,11 +8,7 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     globals : function() {
-      var myObject = {
-        name : 'Jory'
-      };
-
-      return myObject;
+      
     },
 
     functions : function(flag) {
